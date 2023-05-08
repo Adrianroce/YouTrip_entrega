@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% load my_filters %}
+
+{% block content %}
+<!-- ***** Main Banner Area Start ***** -->
+<div class="page-heading" id="top">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="inner-content">
+                    <h2>{{user.username}}, descubre el mundo a tu manera <i class="fa fa-rocket" aria-hidden="true"></i>
+                    </h2>
+                    <span>Conocer al usuario es esencial para brindar una experiencia de viaje satisfactoria. 
+                        Con una comprensión clara de sus necesidades y preferencias, podemos recomendar opciones personalizadas y garantizar que cada 
+                        detalle se ajuste a sus expectativas. En <strong>YouTrip</strong>, nos comprometemos a brindar un servicio personalizado y enfocado en 
+                        el cliente para asegurarnos de que su viaje sea inolvidable.</span>
+                    <hr>
+                        {% if request.path == '/recomendadorDestinos/' %}
+                            <a href="{% url 'formulario' %}">
+                                <button type="button" class="btn btn-outline-warning">Comienza!!!</button>
+                            </a>
+                        {% else %}
+                            <a href="{% url 'recomendadorDestinos' %}">
+                                <button type="button" class="btn btn-outline-warning">Atras <i class="fa fa-hand-o-left" aria-hidden="true"></i>
+                                </button>
+                            </a>
+                        {% endif %}
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% if request.path == '/recomendadorDestinos/' %}
+<!-- Contenido principal de la página -->
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-6">
+            <h1>El papel de un buen recomendador de viajes</h1>
+            <p>Un buen recomendador de viajes puede marcar la diferencia entre un viaje mediocre y un viaje perfecto. Hay muchas razones por las que deberías confiar en un recomendador de viajes experimentado, como:</p>
+            <ul>
+                <li><strong>Conocimiento local:</strong> Un buen recomendador de viajes conoce el destino en profundidad y puede recomendarte los mejores lugares para visitar, los restaurantes más auténticos y las experiencias más interesantes.</li>
+                <li><strong>Personalización:</strong> Un buen recomendador de viajes te escucha atentamente y te ayuda a crear un itinerario que se ajuste a tus intereses, presupuesto y preferencias.</li>
+                <li><strong>Ahorro de tiempo y dinero:</strong> Un buen recomendador de viajes puede ahorrarte horas de investigación en línea y puede conseguirte descuentos y ofertas exclusivas.</li>
+                <li><strong>Seguridad:</strong> Un buen recomendador de viajes puede ayudarte a evitar zonas peligrosas, situaciones incómodas y estafas comunes.</li>
+            </ul>
+            <p>No subestimes el valor de un buen recomendador de viajes. Si estás planeando un viaje importante, vale la pena invertir en la experiencia y conocimiento de un experto.</p>
+        </div>
+    </div>
+</div>
+{% endif %}
+
+ <!--Contenido cambiante del sitio-->
+ {% block preguntas %}
+
+ {% endblock %}
+    
+    <!-- ***** Footer Start ***** -->
+
+{% endblock %}

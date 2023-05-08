@@ -1,0 +1,232 @@
+{% extends 'recomendador.html' %}
+
+{% load static %}
+
+{% load my_filters %}
+
+{% block preguntas %}
+<section class="section">
+    <div class="mx-0 mx-sm-auto">
+        <div class="card">
+          <div class="card-body">
+      
+            <form class="px-4" action="" method="post">
+              {% csrf_token %}
+
+            <!--Pregunta 1-->
+            <div class="text-center" style="margin-bottom: 50px; margin-top: 25px;"><h2>Pregunta 1</h2></div>
+              <p class="text-center"><strong>En una escala del 1 al 5, donde 1 significa que no es importante y 5 significa que es extremadamente importante, 
+                ¿cuánta importancia le das al elegir un destino de vacaciones que sea ideal para familias? Considera factores como la seguridad del destino, 
+                la disponibilidad de actividades para niños, 
+                la comodidad y accesibilidad para la familia, y cualquier otro aspecto que consideres importante para viajar en familia.</strong></p>
+      
+              <div class="form-check mb-2">
+                <input class="form-check-input" type="radio" name="p1" value="1" id="value1" />
+                <label class="form-check-label" for="value1">
+                  1
+                </label>
+              </div>
+              <div class="form-check mb-2">
+                <input class="form-check-input" type="radio" name="p1" value="2" id="value2" />
+                <label class="form-check-label" for="value2">
+                  2
+                </label>
+              </div>
+              <div class="form-check mb-2">
+                <input class="form-check-input" type="radio" name="p1" value="3" id="value3" />
+                <label class="form-check-label" for="value3">
+                  3
+                </label>
+              </div>
+              <div class="form-check mb-2">
+                <input class="form-check-input" type="radio" name="p1" value="4" id="value4" />
+                <label class="form-check-label" for="value4">
+                  4
+                </label>
+              </div>
+              <div class="form-check mb-2">
+                <input class="form-check-input" type="radio" name="p1" value="5" id="value5" checked="checked"/>
+                <label class="form-check-label" for="value5">
+                  5
+                </label>
+              </div>
+
+              <hr>
+              <!--Pregunta 2-->
+            <div class="text-center" style="margin-bottom: 50px; margin-top: 25px;"><h2>Pregunta 2</h2></div>
+            <p class="text-center"><strong>En una escala del 1 al 5, donde 1 significa que no es importante y 5 significa que es extremadamente importante, 
+              ¿cuánta importancia le das al elegir un destino de vacaciones que sea ideal para familias? Considera factores como la seguridad del destino, 
+              la disponibilidad de actividades para niños, 
+              la comodidad y accesibilidad para la familia, y cualquier otro aspecto que consideres importante para viajar en familia.</strong></p>
+    
+            <div class="form-check mb-2">
+              <input class="form-check-input" type="radio" name="p2" value="1" id="value1" />
+              <label class="form-check-label" for="value1">
+                1
+              </label>
+            </div>
+            <div class="form-check mb-2">
+              <input class="form-check-input" type="radio" name="p2" value="2" id="value2" />
+              <label class="form-check-label" for="value2">
+                2
+              </label>
+            </div>
+            <div class="form-check mb-2">
+              <input class="form-check-input" type="radio" name="p2" value="3" id="value3" />
+              <label class="form-check-label" for="value3">
+                3
+              </label>
+            </div>
+            <div class="form-check mb-2">
+              <input class="form-check-input" type="radio" name="p2" value="4" id="value4" />
+              <label class="form-check-label" for="value4">
+                4
+              </label>
+            </div>
+            <div class="form-check mb-2">
+              <input class="form-check-input" type="radio" name="p2" value="5" id="value5" checked="checked"/>
+              <label class="form-check-label" for="value5">
+                5
+              </label>
+            </div>
+            <!--Pregunta 3-->
+            <div class="text-center" style="margin-bottom: 50px; margin-top: 25px;"><h2>Pregunta 3</h2></div>
+            <p class="text-center"><strong>En una escala del 1 al 5, donde 1 significa que no es importante y 5 significa que es extremadamente importante, 
+              ¿cuánta importancia le das al elegir un destino de vacaciones que sea ideal para familias? Considera factores como la seguridad del destino, 
+              la disponibilidad de actividades para niños, 
+              la comodidad y accesibilidad para la familia, y cualquier otro aspecto que consideres importante para viajar en familia.</strong></p>
+    
+            <div class="form-check mb-2">
+              <input class="form-check-input" type="radio" name="p3" value="1" id="value1" />
+              <label class="form-check-label" for="value1">
+                1
+              </label>
+            </div>
+            <div class="form-check mb-2">
+              <input class="form-check-input" type="radio" name="p3" value="2" id="value2" />
+              <label class="form-check-label" for="value2">
+                2
+              </label>
+            </div>
+            <div class="form-check mb-2">
+              <input class="form-check-input" type="radio" name="p3" value="3" id="value3" />
+              <label class="form-check-label" for="value3">
+                3
+              </label>
+            </div>
+            <div class="form-check mb-2">
+              <input class="form-check-input" type="radio" name="p3" value="4" id="value4" />
+              <label class="form-check-label" for="value4">
+                4
+              </label>
+            </div>
+            <div class="form-check mb-2">
+              <input class="form-check-input" type="radio" name="p3" value="5" id="value5" checked="checked"/>
+              <label class="form-check-label" for="value5">
+                5
+              </label>
+            </div>
+            <!--Pregunta 4-->
+            <div class="text-center" style="margin-bottom: 50px; margin-top: 25px;"><h2>Pregunta 4</h2></div>
+            <p class="text-center"><strong>En una escala del 1 al 5, donde 1 significa que no es importante y 5 significa que es extremadamente importante, 
+              ¿cuánta importancia le das al elegir un destino de vacaciones que sea ideal para familias? Considera factores como la seguridad del destino, 
+              la disponibilidad de actividades para niños, 
+              la comodidad y accesibilidad para la familia, y cualquier otro aspecto que consideres importante para viajar en familia.</strong></p>
+    
+            <div class="form-check mb-2">
+              <input class="form-check-input" type="radio" name="p4" value="1" id="value1" />
+              <label class="form-check-label" for="value1">
+                1
+              </label>
+            </div>
+            <div class="form-check mb-2">
+              <input class="form-check-input" type="radio" name="p4" value="2" id="value2" />
+              <label class="form-check-label" for="value2">
+                2
+              </label>
+            </div>
+            <div class="form-check mb-2">
+              <input class="form-check-input" type="radio" name="p4" value="3" id="value3" />
+              <label class="form-check-label" for="value3">
+                3
+              </label>
+            </div>
+            <div class="form-check mb-2">
+              <input class="form-check-input" type="radio" name="p4" value="4" id="value4" />
+              <label class="form-check-label" for="value4">
+                4
+              </label>
+            </div>
+            <div class="form-check mb-2">
+              <input class="form-check-input" type="radio" name="p4" value="5" id="value5" checked="checked"/>
+              <label class="form-check-label" for="value5">
+                5
+              </label>
+            </div>
+            <!--Pregunta 5-->
+            <div class="text-center" style="margin-bottom: 50px; margin-top: 25px;"><h2>Pregunta 5</h2></div>
+            <p class="text-center"><strong>En una escala del 1 al 5, donde 1 significa que no es importante y 5 significa que es extremadamente importante, 
+              ¿cuánta importancia le das al elegir un destino de vacaciones que sea ideal para familias? Considera factores como la seguridad del destino, 
+              la disponibilidad de actividades para niños, 
+              la comodidad y accesibilidad para la familia, y cualquier otro aspecto que consideres importante para viajar en familia.</strong></p>
+    
+            <div class="form-check mb-2">
+              <input class="form-check-input" type="radio" name="p5" value="1" id="value1" />
+              <label class="form-check-label" for="value1">
+                1
+              </label>
+            </div>
+            <div class="form-check mb-2">
+              <input class="form-check-input" type="radio" name="p5" value="2" id="value2" />
+              <label class="form-check-label" for="value2">
+                2
+              </label>
+            </div>
+            <div class="form-check mb-2">
+              <input class="form-check-input" type="radio" name="p5" value="3" id="value3" />
+              <label class="form-check-label" for="value3">
+                3
+              </label>
+            </div>
+            <div class="form-check mb-2">
+              <input class="form-check-input" type="radio" name="p5" value="4" id="value4" />
+              <label class="form-check-label" for="value4">
+                4
+              </label>
+            </div>
+            <div class="form-check mb-2">
+              <input class="form-check-input" type="radio" name="p5" value="5" id="value5" checked="checked"/>
+              <label class="form-check-label" for="value5">
+                5
+              </label>
+            </div>
+
+            <!--Pregunta 6-->
+            <div class="text-center" style="margin-bottom: 50px; margin-top: 25px;"><h2>Pregunta 6</h2></div>
+            <p class="text-center"><strong>Fechas viaje.</strong></p>
+            
+            <div class="form-group mb-3">
+              <label class="label" for="name">Fecha inicio</label>
+              <input type="date" name="fecha_inicio" class="form-control" value = "{{viaje_modificar.fecha_inicio|date:'Y-m-d'}}" required>
+            </div>
+
+            <div class="form-group mb-3">
+                <label class="label" for="name">Fecha fin</label>
+                <input type="date" name="fecha_fin" class="form-control" value = "{{viaje_modificar.fecha_fin|date:'Y-m-d'}}" required>
+            </div>
+
+
+            <!--submit-->
+              <div class="form-group" style="margin: 50px;">
+                <button id="botonrecomendar" type="submit" class="form-control btn rounded submit px-3 btn-outline-warning">Completar</button>
+            </div>
+            </form>
+          </div>
+          
+        </div>
+      </div>
+</section>
+  
+  <!-- ***** Footer Start ***** -->
+
+{% endblock %}
